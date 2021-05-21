@@ -1,3 +1,9 @@
+<!-- 
+    Author: Willan Mendieta , Darwin Leon
+    Date:   20/05/2021
+    
+-->
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,17 +18,17 @@
 <body>
  <?php 
  //incluir conexión a la base de datos
- include '../../config/conexionBD.php'; 
+ include '../../../config/conexionBD.php'; 
  $cedula = isset($_POST["cedula"]) ? trim($_POST["cedula"]) : null;
  $nombres = isset($_POST["nombres"]) ? mb_strtoupper(trim($_POST["nombres"]), 'UTF-8') : null;
  $apellidos = isset($_POST["apellidos"]) ? mb_strtoupper(trim($_POST["apellidos"]), 'UTF-8') : null;
  $direccion = isset($_POST["direccion"]) ? mb_strtoupper(trim($_POST["direccion"]), 'UTF-8') : null;
- $telefono = isset($_POST["telefono"]) ? trim($_POST["telefono"]): null; 
  $correo = isset($_POST["correo"]) ? trim($_POST["correo"]): null;
- $fechaNacimiento = isset($_POST["fechaNacimiento"]) ? trim($_POST["fechaNacimiento"]): null; 
  $contrasena = isset($_POST["contrasena"]) ? trim($_POST["contrasena"]) : null;
- $sql = "INSERT INTO usuario VALUES (0, '$cedula', '$nombres', '$apellidos', '$direccion', '$telefono', 
- '$correo', MD5('$contrasena'), '$fechaNacimiento', 'N', null, null)"; 
+ $fechaNacimiento = isset($_POST["fechaNacimiento"]) ? trim($_POST["fechaNacimiento"]): null; 
+ $rol = isset($_POST["rol"]) ? mb_strtoupper(trim($_POST["rol"]), 'UTF-8') : null;
+ $sql = "INSERT INTO usuarios VALUES (0, '$cedula', '$nombres', '$apellidos', '$direccion', 
+ '$correo', MD5('$contrasena'), 'N', '$fechaNacimiento', null, null, '$rol')"; 
   if ($conn->query($sql) === TRUE) {
   echo "<p>Se ha creado los datos personales correctamemte!!!</p>"; 
   } else {
@@ -35,8 +41,7 @@
   
   //cerrar la base de datos
   $conn->close();
-  echo "<a href='../vista/crear_usuario.html'>Regresar</a>";
-  
+  echo "<a href='../../vista/usuario/crear_usuarioA.php'>Regresar</a>";
   ?>
  </body>
  </html>

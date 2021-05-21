@@ -6,17 +6,16 @@
 
 #navUsuariosAdmi{
     float: left;
-    margin-top: 1%;
-    width: 89%;
+    margin-top: 2%;
+    width: 40%;
 }
 
 #navUsuariosAdmi li{
     float: left;
-    width: 15%;
+    width: 30%;
     text-align-last: center;
     font-size: 180%;
-    margin-top: 1%;
-    margin-left: 60%;
+    margin-top: 5%;
     margin-bottom: 1%;
     margin: 0;
    }
@@ -42,14 +41,14 @@ h1{
 #navUsuariosAdmi{
     float: left;
     height: max-content;
-    margin-left: 5%;
+    margin-left: 13%;
 }
 
 
 
 #BloqueDeBajoMenu{
     float: left;
-    margin-top: 2%;
+    margin-top: 3%;
     margin-left: 25%;
     margin-right: 0%;
     margin-bottom: 0%;
@@ -84,8 +83,25 @@ footer{
 }
 
 input{
-    width: 68%;
+    width: 50%;
     height: 50%;
-    font-size:80%;
-    margin-left: 10%;
+    font-size:70%;
+    margin-left: 2%;
+}
+#boton_aceptar{
+    margin-top: 2%;
+    float: left;
+    margin-left: 0%;
+    font-size:100%;
+}
+#boton_cancelar{
+    margin-top: -4.1%;
+    float: left;
+    margin-left: 50%;
+    font-size:100%;
+}
+
+#tablaUsuarios{
+    float: left;
+    font-size:59%;
 }
