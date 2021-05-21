@@ -1,0 +1,47 @@
+@font-face {
+    font-family: "OLF";
+    src: url("../Estilo_Tex/Original_Surfer/OriginalSurfer-Regular.ttf");
+
+}
+
+body{
+    /*background-image: url(../../config/imagenes/fondo.jpg);
+    background-size: cover;*/
+    background-color: indianred;
+}
+
+#navUsuariosAdmi li{
+    border: black solid;
+    font-style: italic;
+    list-style: none;
+    font-family: 'OLF'; 
+     background-color: greenyellow; 
+}
+#navUsuariosAdmi li a:hover{
+    background-color: yellow;
+}
+
+h1 {color: whitesmoke; 
+    font-family: 'OLF'; 
+    font-weight: bolder;
+    text-decoration: underline;
+    font-size:700%;
+    float: left;
+}
+
+#BloqueDeBajoMenu{
+    color: whitesmoke; 
+    font-family: 'OLF'; 
+    font-weight: bolder;
+    text-decoration: underline;
+    font-size:180%;
+}
+
+
+
+    
+
+#Pie{
+    color: whitesmoke; 
+}
+
