@@ -5,8 +5,8 @@
 }
 
 body{
-    /*background-image: url(../../config/imagenes/fondo.jpg);
-    background-size: cover;*/
+    background-image: url(../../config/imagenes/fondo.jpg);
+    background-size: cover;
     background-color: indianred;
 }
 
