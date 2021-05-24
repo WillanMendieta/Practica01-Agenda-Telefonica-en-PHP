@@ -27,9 +27,9 @@
         echo " <td> <a href=mailto:".$row['usu_correo'].">".$row['usu_correo']."</a> </td>";
         echo " <td>" . $row['usu_fecha_nacimiento'] . "</td>"; 
         echo " <td> <a href='../telefonos.php?codigo=" . $row['usu_id'] . "'>Telefonos</a> </td>";
-        echo " <td> <a href='eliminar.php?codigo=" . $row['usu_id'] . "'>Eliminar</a> </td>";
-        echo " <td> <a href='modificar_usuarioA.php?codigo=" . $row['usu_id'] . "'>Modificar</a> </td>";
-        echo " <td> <a href='cambiar_contrasena.php?codigo=" . $row['usu_id'] . "'>Cambiar contraseña</a> </td>";
+        echo " <td> <a href='../eliminar_usuarioA.php?codigo=" . $row['usu_id'] . "'>Eliminar</a> </td>";
+        echo " <td> <a href='../modificar_usuarioA.php?codigo=" . $row['usu_id'] . "'>Modificar</a> </td>";
+        echo " <td> <a href='../cambiar_contra_usuarioA.php?codigo=" . $row['usu_id'] . "'>Cambiar contraseña</a> </td>";
         echo "</tr>";
     }
  } else { 
