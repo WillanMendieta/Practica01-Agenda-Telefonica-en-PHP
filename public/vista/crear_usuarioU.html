@@ -1,10 +1,11 @@
-!DOCTYPE html>
+<DOCTYPE html>
 <html>
 <head>
  <meta charset="UTF-8">
 </head>
 <body>
- <form id="formulario01" method="POST" action="../controladores/crear_usuario.php">
+<h1>CREAR USUARIO</h1>
+ <form id="formulario01" method="POST" action="../controladores/crear_usuarioU.php">
  <label for="cedula">Cedula (*)</label>
  <input type="text" id="cedula" name="cedula" value="" placeholder="Ingrese el número de cedula ..."
 required/>
@@ -22,22 +23,26 @@ required/>
  <input type="text" id="direccion" name="direccion" value="" placeholder="Ingrese su dirección ..."
 required/>
  <br>
- <label for="telefono">Teléfono (*)</label>
- <input type="text" id="telefono" name="telefono" value="" placeholder="Ingrese su número telefónico 
-..." required/>
- <br> 
- <label for="fecha">Fecha Nacimiento (*)</label>
- <input type="date" id="fechaNacimiento" name="fechaNacimiento" value="" placeholder="Ingrese su 
-fecha de nacimiento ..." required/>
- <br>
  <label for="correo">Correo electrónico (*)</label>
  <input type="email" id="correo" name="correo" value="" placeholder="Ingrese su correo electrónico 
 ..." required/>
  <br>
- <label for="correo">Contraseña (*)</label>
+ <label for="contrasena">Contraseña (*)</label>
  <input type="password" id="contrasena" name="contrasena" value="" placeholder="Ingrese su 
 contraseña ..." required/>
  <br>
+ <label for="fecha">Fecha Nacimiento (*)</label>
+ <input type="date" id="fechaNacimiento" name="fechaNacimiento" value="" placeholder="Ingrese su 
+fecha de nacimiento ..." required/>
+ <br>
+ <label for="rol">Rol de usuario (*)</label>
+ <select name="select">
+    <option value="value1" selected></option>
+    <option value="value2">Admin</option>
+    <option value="value3">Usuario</option>
+  </select>
+ <br>
+
  <input type="submit" id="crear" name="crear" value="Crear Usuario" />
  <input type="reset" id="cancelar" name="cancelar" value="Cancelar" />
  </form> 
