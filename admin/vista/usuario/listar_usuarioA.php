@@ -56,6 +56,7 @@
                                 echo " <td>" . $row['usu_nombres'] ."</td>";
                                 echo " <td>" . $row['usu_apellidos'] . "</td>";
                                 echo " <td>" . $row['usu_direccion'] . "</td>";
+                                echo " <td> <a mailto='telefonos.php?codigo=" . $row['usu_id'] . "'>Telefonos</a> </td>";
                                 echo " <td>" . $row['usu_correo'] . "</td>"; 
                                 echo " <td>" . $row['usu_fecha_nacimiento'] . "</td>"; 
                                 echo " <td> <a href='telefonos.php?codigo=" . $row['usu_id'] . "'>Telefonos</a> </td>";
