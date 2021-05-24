@@ -22,7 +22,7 @@
             <nav> 
                 <ul id="navUsuariosAdmi"> 
                 <li><a href="crear_usuarioA.php">Agregar Usuario</a></li> 
-                <li><a href="../">Buscar Usuario</a></li> 
+                <li><a href="../usuario/buscarCedula/buscar.html">Buscar Usuario</a></li> 
                 <li><a href="listar_usuarioA.php">Listar Usuarios</a></li>  
                 </ul> 
             </nav>
@@ -56,14 +56,12 @@
                                 echo " <td>" . $row['usu_nombres'] ."</td>";
                                 echo " <td>" . $row['usu_apellidos'] . "</td>";
                                 echo " <td>" . $row['usu_direccion'] . "</td>";
-                                echo " <td> <a mailto='telefonos.php?codigo=" . $row['usu_id'] . "'>Telefonos</a> </td>";
-                                echo " <td>" . $row['usu_correo'] . "</td>"; 
+                                echo " <td> <a href=mailto:".$row['usu_correo'].">".$row['usu_correo']."</a> </td>";
                                 echo " <td>" . $row['usu_fecha_nacimiento'] . "</td>"; 
                                 echo " <td> <a href='telefonos.php?codigo=" . $row['usu_id'] . "'>Telefonos</a> </td>";
                                 echo " <td> <a href='eliminar.php?codigo=" . $row['usu_id'] . "'>Eliminar</a> </td>";
                                 echo " <td> <a href='modificar_usuarioA.php?codigo=" . $row['usu_id'] . "'>Modificar</a> </td>";
-                                echo " <td> <a href='cambiar_contrasena.php?codigo=" . $row['usu_id'] . "'>Cambiar 
-                            contraseña</a> </td>";
+                                echo " <td> <a href='cambiar_contrasena.php?codigo=" . $row['usu_id'] . "'>Cambiar contraseña</a> </td>";
                                 echo "</tr>";
                             }
                             

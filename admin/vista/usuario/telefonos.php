@@ -22,7 +22,7 @@
             <nav> 
                 <ul id="navUsuariosAdmi"> 
                 <li><a href="crear_usuarioA.php">Agregar Usuario</a></li> 
-                <li><a href="../">Buscar Usuario</a></li> 
+                <li><a href="../usuario/buscarCedula/buscar.html">Buscar Usuario</a></li> 
                 <li><a href="listar_usuarioA.php">Listar Usuarios</a></li>  
                 </ul> 
             </nav>
@@ -52,7 +52,7 @@
                                                      
                             while($row = $result->fetch_assoc()) {
                                 echo "<tr>";
-                                echo " <td>" . $row["tel_numero"] . "</td>";
+                                echo " <td> <a href=tel:".$row["tel_numero"].">".$row["tel_numero"]."</a> </td>";
                                 echo " <td>" . $row['tel_tipo'] ."</td>";
                                 echo " <td>" . $row['tel_operadora'] . "</td>";
                                 echo " <td>" . $row['tel_eliminado'] . "</td>";
@@ -75,12 +75,9 @@
                        
                         $conn->close();
                         ?>
-                        </table>
-                           
-                       
+                        </table>       
     	        </article>
             </section>
-
         <footer id="Pie">
             Integrantes:Willan Mendieta  Correo:<a href="Correos: wmendietam@est.ups.edu.ec">wmendietam@est.ups.edu.ec</a> tel: <a href="tel: 0980158835 "> 0998113193 </a></p>
             Darwin Leon Correo: <a href="Correos: dleont@est.ups.edu.ec">dleont@est.ups.edu.ec</a> tel: <a href="tel: 0998113193"> 0998113193 </a></p>

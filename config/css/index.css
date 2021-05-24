@@ -49,22 +49,32 @@ h1{
 #BloqueDeBajoMenu{
     float: left;
     margin-top: 3%;
-    margin-left: 25%;
+    margin-left: 55%;
     margin-right: 0%;
     margin-bottom: 0%;
-    width: 50%;
+    width: 60%;
     background-color: rgb(21, 124, 168,0.6);
 }
 
 #BloqueDeBajoMenu{
     float: left;
     height: max-content;
+    margin: 0%;
+    padding: 0%;
+    margin-left: 20%;
 }
 
+#BloqueDeBajoMenuC{
+    float: left;
+    margin-left: 25%;
+    background-color: rgb(21, 124, 168,0.6);
+    width: 52%;
+}
 #formulario01{
     float: left;
     width: 100%;
-
+    margin: 0%;
+    padding: 0%;
 }
 
 #Pie{
@@ -95,7 +105,7 @@ input{
     font-size:100%;
 }
 #boton_cancelar{
-    margin-top: -4.1%;
+    margin-top: -3.4%;
     float: left;
     margin-left: 50%;
     font-size:100%;
@@ -104,4 +114,6 @@ input{
 #tablaUsuarios{
     float: left;
     font-size:59%;
+    margin: 0%;
+    padding: 0%;
 }

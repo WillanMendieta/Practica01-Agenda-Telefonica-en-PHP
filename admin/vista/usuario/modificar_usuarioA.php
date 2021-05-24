@@ -21,7 +21,7 @@
             <nav> 
                 <ul id="navUsuariosAdmi"> 
                 <li><a href="crear_usuarioA.php">Agregar Usuario</a></li> 
-                <li><a href="../">Buscar Usuario</a></li> 
+                <li><a href="../usuario/buscarCedula/buscar.html">Buscar Usuario</a></li> 
                 <li><a href="listar_usuarioA.php">Listar Usuarios</a></li>  
                 </ul> 
             </nav>
