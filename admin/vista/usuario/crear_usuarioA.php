@@ -14,7 +14,16 @@
     <link href="../../../config/css/textos.css" rel="stylesheet"/>
 
 	<head>
-      
+
+    <?php
+ session_start();
+ if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE){ 
+ header("Location: ../../../public/vista/login.html"); 
+ }
+
+?>
+
+
         <header>
             <img id="logo" src="../../../config/imagenes/telefono.png" alt="../index.html" />
             <h1>Agenda Telefonica</h1>
@@ -25,6 +34,7 @@
                 <li><a href="crear_usuarioA.php">Agregar Usuario</a></li> 
                 <li><a href="../usuario/buscarCedula/buscar.html">Buscar Usuario</a></li> 
                 <li><a href="listar_usuarioA.php">Listar Usuarios</a></li>  
+                <li><a href="../../../config/cerrar.sesion.php">Cerrar Sesion</a></li> 
                 </ul> 
             </nav>
         </header>
@@ -69,16 +79,16 @@
                     <br>
 
                     <label for="numero">Numero (*)</label>
-                    <input type="text" id="numero" name="numero" value="" placeholder="Ingrese el número de numero ..."
+                    <input type="text" id="numero" name="numero" value="" placeholder="Ingrese el número de telefono ..."
                     required/>
                     <br>
                     
                     <label for="tipo">Tipo (*)</label>
-                    <input type="text" id="tipo" name="tipo" value="" placeholder="Ingrese sus dos tipo ..." required/>
+                    <input type="text" id="tipo" name="tipo" value="" placeholder="Ingrese su tipo de telefono ..." required/>
                     <br>
                     
                     <label for="operadora">Operadora (*)</label>
-                    <input type="text" id="operadora" name="operadora" value="" placeholder="Ingrese sus dos operadora ..." required/>
+                    <input type="text" id="operadora" name="operadora" value="" placeholder="Ingrese su operadora ..." required/>
                     <br>
 
 

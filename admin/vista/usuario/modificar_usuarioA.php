@@ -14,6 +14,14 @@
     <link href="../../../config/css/textos.css" rel="stylesheet"/>
     
 	<head>
+
+    <?php
+ session_start();
+ if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE){ 
+ header("Location: ../../../public/vista/login.html"); 
+ }
+
+?>
       
         <header>
             <img id="logo" src="../../../config/imagenes/telefono.png" alt="../index.html" />
@@ -23,6 +31,7 @@
                 <li><a href="crear_usuarioA.php">Agregar Usuario</a></li> 
                 <li><a href="../usuario/buscarCedula/buscar.html">Buscar Usuario</a></li> 
                 <li><a href="listar_usuarioA.php">Listar Usuarios</a></li>  
+                <li><a href="../../../config/cerrar.sesion.php">Cerrar Sesion</a></li> 
                 </ul> 
             </nav>
         </header>
