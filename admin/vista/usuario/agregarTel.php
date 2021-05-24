@@ -17,7 +17,7 @@
       
         <header>
             <img id="logo" src="../../../config/imagenes/telefono.png" alt="../index.html" />
-            <h1>Agenda Telefonica</h1>
+            <h1>Agregar Telefonos</h1>
 
             </nav>
             <nav> 
@@ -29,44 +29,20 @@
             </nav>
         </header>
           
+        
 		<body>
             <section>
             
+
                 <article id="BloqueDeBajoMenu">
-                    <form id="formulario01" method="POST" action="../../controladores/usuario/crear_usuarioA.php">
 
-                    <label for="cedula">Cedula (*)</label>
-                    <input type="text" id="cedula" name="cedula" value="" placeholder="Ingrese el número de cedula ..."
-                    required/>
-                    <br>
-                    
-                    <label for="nombres">Nombres (*)</label>
-                    <input type="text" id="nombres" name="nombres" value="" placeholder="Ingrese sus dos nombres ..." required/>
-                    <br>
-                    
-                    <label for="apellidos">Apelidos (*)</label>
-                    <input type="text" id="apellidos" name="apellidos" value="" placeholder="Ingrese sus dos apellidos ..." required/>
-                    <br>
+                <?php
+                    $codigo = $_GET["codigoT"];
+                    ?>
 
-                    <label for="direccion">Dirección (*)</label>
-                    <input type="text" id="direccion" name="direccion" value="" placeholder="Ingrese su dirección ..."required/>
-                    <br>
+                    <form id="formulario01" method="POST" action="../../controladores/usuario/agregarTel.php">
 
-                    <label for="correo">Correo electrónico (*)</label>
-                    <input type="email" id="correo" name="correo" value="" placeholder="Ingrese su correo electrónico ..." required/>
-                    <br>
-                    
-                    <label for="correo">Contraseña (*)</label>
-                    <input type="password" id="contrasena" name="contrasena" value="" placeholder="Ingrese su contraseña ..." required/>
-                    <br>
-                    
-                    <label for="fecha">Fecha Nacimiento (*)</label>
-                    <input type="date" id="fechaNacimiento" name="fechaNacimiento" value="" placeholder="Ingrese su fecha de nacimiento ..." required/>
-                    <br>
-                    
-                    <label for="rol">Rol de usuario (*)</label>
-                    <input type="text" id="rol" name="rol" value="" placeholder="Ingrese el rol del usuario ..."required/>
-                    <br>
+                    <input type="hidden" id="codigo" name="codigo" value="<?php echo $codigo ?>" />
 
                     <label for="numero">Numero (*)</label>
                     <input type="text" id="numero" name="numero" value="" placeholder="Ingrese el número de numero ..."
@@ -80,10 +56,8 @@
                     <label for="operadora">Operadora (*)</label>
                     <input type="text" id="operadora" name="operadora" value="" placeholder="Ingrese sus dos operadora ..." required/>
                     <br>
-
-
-
-                    <input id="boton_aceptar" type="submit" id="crear" name="crear" value="Agregar Usuario" />
+                    
+                    <input id="boton_aceptar" type="submit" id="crear" name="crear" value="Agregar Telefono" />
                     <input id="boton_cancelar" type="reset" id="cancelar" name="cancelar" value="Cancelar" />
                     </form>
     	        </article>

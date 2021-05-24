@@ -8,7 +8,7 @@
 	<head>
         <meta charset="utf-8" language="es">
         <meta http-equiv="content-type" content="text/html1; charset-=iso-8859-1"/>
-    <title>Listar Usuarios</title>
+    <title>Lista telefonos</title>
 
     <link href="../../../config/css/index.css"  rel="stylesheet"/>
     <link href="../../../config/css/textos.css" rel="stylesheet"/>
@@ -35,47 +35,49 @@
 
                         <table id="tablaUsuarios" style="width:50%">
                         <tr>
-                        <th>Cedula</th>
-                        <th>Nombres</th>
-                        <th>Apellidos</th>
-                        <th>Dirección</th>
-                        <th>Correo</th>
-                        <th>Fecha Nacimiento</th> 
+                        <th>Numero</th>
+                        <th>Tipo</th>
+                        <th>Operadora</th>
+                        <th>Eliminado</th>
                         </tr>
 
                         <?php
                         include '../../../config/conexionBD.php'; 
-                        $sql = "SELECT * FROM usuarios";
+                        $codigo = $_GET["codigo"];
+                        $sql = "SELECT * FROM telefonos where tel_usuario=$codigo";
                         $result = $conn->query($sql);
                         
                         if ($result->num_rows > 0) {
-                        
+
+                                                     
                             while($row = $result->fetch_assoc()) {
                                 echo "<tr>";
-                                echo " <td>" . $row["usu_cedula"] . "</td>";
-                                echo " <td>" . $row['usu_nombres'] ."</td>";
-                                echo " <td>" . $row['usu_apellidos'] . "</td>";
-                                echo " <td>" . $row['usu_direccion'] . "</td>";
-                                echo " <td>" . $row['usu_correo'] . "</td>"; 
-                                echo " <td>" . $row['usu_fecha_nacimiento'] . "</td>"; 
-                                echo " <td> <a href='telefonos.php?codigo=" . $row['usu_id'] . "'>Telefonos</a> </td>";
-                                echo " <td> <a href='eliminar.php?codigo=" . $row['usu_id'] . "'>Eliminar</a> </td>";
-                                echo " <td> <a href='modificar_usuarioA.php?codigo=" . $row['usu_id'] . "'>Modificar</a> </td>";
-                                echo " <td> <a href='cambiar_contrasena.php?codigo=" . $row['usu_id'] . "'>Cambiar 
-                            contraseña</a> </td>";
+                                echo " <td>" . $row["tel_numero"] . "</td>";
+                                echo " <td>" . $row['tel_tipo'] ."</td>";
+                                echo " <td>" . $row['tel_operadora'] . "</td>";
+                                echo " <td>" . $row['tel_eliminado'] . "</td>";
+                                echo " <td> <a href='eliminar.php?codigo=" . $row['tel_id'] . "'>Eliminar</a> </td>";
+                                echo " <td> <a href='modificar_usuarioA.php?codigo=" . $row['tel_id'] . "'>Modificar</a> </td>";
+                                echo " <td> <a href='agregarTel.php?codigoT=" . $row['tel_usuario'] . "'>Agregar Telefonos </a> </td>";
                                 echo "</tr>";
                             }
-                            
                         } else {
                         echo "<tr>";
                         echo " <td colspan='7'> No existen usuarios registradas en el sistema </td>";
                         echo "</tr>";
-                        }
-                        #echo " <td> <a href='../../../config/cerrar_sesion.php'>Cerrar Sesion</a> </td>";
+                        echo "<tr>";
+                        echo " <td> <a href='agregarTel.php?codigoT=" . $row['tel_usuario'] . "'>Agregar Telefonos </a> </td>";
+                       # echo " <td> <a href='../../controladores/usuario/agregarTel.php?codigoT=" . $row['tel_usuario'] . "'></a> </td>";
+                        echo "</tr>";
 
+                        
+                        }
+                       
                         $conn->close();
                         ?>
                         </table>
+                           
+                       
     	        </article>
             </section>
 

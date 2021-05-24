@@ -29,8 +29,16 @@
  $rol = isset($_POST["rol"]) ? mb_strtoupper(trim($_POST["rol"]), 'UTF-8') : null;
  $sql = "INSERT INTO usuarios VALUES (0, '$cedula', '$nombres', '$apellidos', '$direccion', 
  '$correo', MD5('$contrasena'), 'N', '$fechaNacimiento', null, null, '$rol')"; 
-  if ($conn->query($sql) === TRUE) {
-  echo "<p>Se ha creado los datos personales correctamemte!!!</p>"; 
+
+ $numero = isset($_POST["numero"]) ? trim($_POST["numero"]) : null;
+ $tipo = isset($_POST["tipo"]) ? mb_strtoupper(trim($_POST["tipo"]), 'UTF-8') : null;
+ $operadora = isset($_POST["operadora"]) ? mb_strtoupper(trim($_POST["operadora"]), 'UTF-8') : null;
+ $sql2 = "INSERT INTO telefonos VALUES (0, '$numero', '$tipo', '$operadora', 'NO', null, null, 0)"; 
+
+  if ($conn->query($sql2) === TRUE) {
+  echo "<p>Se ha creado los datos personales correctamemte 2!!!</p>"; 
+
+
   } else {
   if($conn->errno == 1062){
   echo "<p class='error'>La persona con la cedula $cedula ya esta registrada en el sistema </p>"; 
