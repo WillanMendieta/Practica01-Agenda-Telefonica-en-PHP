@@ -1,0 +1,19 @@
+table {
+    border-collapse=separate;
+    border: black 2px solid;
+    /*margin: 15px;
+    padding 15px;
+    */
+  }
+  
+  th{
+      border: black 2px solid;
+  }
+  
+  tr {
+    border: black 2px solid;
+  }
+  
+  td {
+    border: black 2px solid;
+  }

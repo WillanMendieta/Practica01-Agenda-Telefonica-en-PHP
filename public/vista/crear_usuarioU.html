@@ -10,6 +10,7 @@
 
   <link href="../../config/css/index.css"  rel="stylesheet"/>
   <link href="../../config/css/textos.css" rel="stylesheet"/>
+  <link href="../controladores/tabla.css" rel=stylesheet />
   <script type="text/javascript" src="../controladores/validaciones.js"></script>
 
   <style type="text/css">
@@ -79,6 +80,51 @@
     <input type="reset" id="cancelar" name="cancelar" value="Cancelar" />
   </form> 
 
+</article>
+
+<h1>LISTAR TELEFONOS</h1> <br>
+<article id="BloqueDeBajoMenu">
+    <form id="formulario01" method="POST" action="../controladores/listar_telefonoU.php" >
+      
+      <label for="cedula">Cedula / correo (*)</label>
+      <input type="text" id="cedulaU" name="cedulaU" value="" placeholder="Ingrese un número de cedula o correo"
+      required onkeyup="return validarNumeros(this)" "return validarCorreo(this)" />
+      <span id="mensajeCedula" class="error"></span>
+      <br>
+      <input type="submit" id="listar" name="listar" value="Listar" />
+      <input type="reset" id="cancelar" name="cancelar" value="Cancelar" />
+      <br>
+      
+      <table border="10px">
+        <tr>
+        <th>N° Telefono </th>
+        <th> Tipo </th>
+        <th> Operadora </th>
+        <th> Fecha Creacion </th>
+        </tr>
+        
+        <tr>
+        <td>  </td>
+        <td>  </td>
+        <td>  </td>
+        <td>  </td>
+        </tr>
+        
+        <tr>
+        <td>  </td>
+        <td>  </td>
+        <td>  </td>
+        <td>  </td>
+        </tr>
+        
+        <tr>
+        <td>  </td>
+        <td>  </td>
+        <td>  </td>
+        <td>  </td>
+        </tr>
+        
+        </table>
 </article>
 
 <footer id="Pie">
