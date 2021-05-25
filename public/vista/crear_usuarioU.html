@@ -1,50 +1,80 @@
 <DOCTYPE html>
 <html>
-<head>
- <meta charset="UTF-8">
-</head>
+  <head>
+  <meta charset="UTF-8">
+  <title>Crear Usuario </title>
+
+  <link href="../../config/css/index.css"  rel="stylesheet"/>
+  <link href="../../config/css/textos.css" rel="stylesheet"/>
+  <script type="text/javascript" src="../controladores/validaciones.js"></script>
+
+  <style type="text/css">
+    .error{
+    color:red;
+    font-size: 10px;
+    }
+  </style>
+
+  </head>
+
 <body>
-<h1>CREAR USUARIO</h1>
- <form id="formulario01" method="POST" action="../controladores/crear_usuarioU.php">
- <label for="cedula">Cedula (*)</label>
- <input type="text" id="cedula" name="cedula" value="" placeholder="Ingrese el número de cedula ..."
-required/>
- <br>
+  <h1>CREAR USUARIO</h1>
 
- <label for="nombres">Nombres (*)</label>
- <input type="text" id="nombres" name="nombres" value="" placeholder="Ingrese sus dos nombres 
-..." required/>
- <br>
- <label for="apellidos">Apelidos (*)</label>
- <input type="text" id="apellidos" name="apellidos" value="" placeholder="Ingrese sus dos apellidos 
-..." required/>
- <br>
- <label for="direccion">Dirección (*)</label>
- <input type="text" id="direccion" name="direccion" value="" placeholder="Ingrese su dirección ..."
-required/>
- <br>
- <label for="correo">Correo electrónico (*)</label>
- <input type="email" id="correo" name="correo" value="" placeholder="Ingrese su correo electrónico 
-..." required/>
- <br>
- <label for="contrasena">Contraseña (*)</label>
- <input type="password" id="contrasena" name="contrasena" value="" placeholder="Ingrese su 
-contraseña ..." required/>
- <br>
- <label for="fecha">Fecha Nacimiento (*)</label>
- <input type="date" id="fechaNacimiento" name="fechaNacimiento" value="" placeholder="Ingrese su 
-fecha de nacimiento ..." required/>
- <br>
- <label for="rol">Rol de usuario(*)</label>
- <select name="select">
-    <option value="value1" selected></option>
-    <option value="value2">Admin</option>
-    <option value="value3">Usuario</option>
-  </select>
- <br>
+  <article id="BloqueDeBajoMenu">
+  <form id="formulario01" method="POST" action="../controladores/crear_usuarioU.php" onsubmit=" return rol()">
+    
+    <label for="cedula">Cedula (*)</label>
+    <input type="text" id="cedula" name="cedula" value="" placeholder="Ingrese el número de cedula"
+    required onkeyup="return validarNumeros(this)" />
+    <span id="mensajeCedula" class="error"></span>
+    <br>
 
- <input type="submit" id="crear" name="crear" value="Crear Usuario" />
- <input type="reset" id="cancelar" name="cancelar" value="Cancelar" />
- </form> 
+    <label for="nombres">Nombres (*)</label>
+    <input type="text" id="nombres" name="nombres" value="" placeholder="Ingrese sus dos nombres" 
+    required onkeyup="return validarLetras(this)"/>
+    <span id="mensajeNombres" class="error"></span>
+    <br>
+
+    <label for="apellidos">Apelidos (*)</label>
+    <input type="text" id="apellidos" name="apellidos" value="" placeholder="Ingrese sus dos apellidos"
+    required onkeyup="return validarLetras(this)"/>
+    <span id="mensajeApellidos" class="error"></span>
+    <br>
+
+    <label for="direccion">Dirección (*)</label>
+    <input type="text" id="direccion" name="direccion" value="" placeholder="Ingrese su dirección" required/>
+    <br>
+
+    <label for="correo">Correo electrónico (*)</label>
+    <input type="email" id="correo" name="correo" value="" placeholder="Ingrese su correo electrónico"
+    required onkeyup="return validarCorreo(this)"/>
+    <span id="mensajeCorreo" class="error"></span>
+    <br>
+
+    <label for="contrasena">Contraseña (*)</label>
+    <input type="password" id="contrasena" name="contrasena" value="" placeholder="Ingrese su contraseña"
+    required onkeyup="return validarPass(this)"/>
+    <span id="mensajePass" class="error"></span>
+    <br>
+
+    <label for="fecha">Fecha Nacimiento (*)</label>
+    <input type="date" id="fechaNacimiento" name="fechaNacimiento" value="" placeholder="Ingrese su fecha de nacimiento"
+    required />
+    <br>
+
+    <label for="rol">Rol de usuario(*)</label>
+    <select id="select" name="select" onsubmit="rol()">
+        <option value="1" selected>Seleccione un rol</option>
+        <option value="A">Admin</option>
+        <option value="U">Usuario</option>
+    </select>
+    <span id="mensajeRol" class="error"></span>
+    <br>
+
+    <input type="submit" id="crear" name="crear" value="Crear Usuario" />
+    <input type="reset" id="cancelar" name="cancelar" value="Cancelar" />
+  </form> 
+
+</article>
 </body>
 </html>
