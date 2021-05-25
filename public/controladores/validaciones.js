@@ -1,4 +1,8 @@
-//
+/*
+autor: Willian Mendieta y Darwin león
+fecha: 25/05/2021
+*/
+
 function validarCamposObligatorios(){
     var bandera =true;
     for(var i=0; i<document.forms[0].elements.length;i++){
@@ -33,7 +37,7 @@ function validarCamposObligatorios(){
             elemento.style.border ='1px red solid'
             elemento.className='error'
             bandera=false
-    }
+        }
     }
     
     if(!bandera){
