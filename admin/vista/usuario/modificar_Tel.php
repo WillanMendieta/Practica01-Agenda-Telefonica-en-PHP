@@ -12,7 +12,7 @@
 
     <link href="../../../config/css/index.css"  rel="stylesheet"/>
     <link href="../../../config/css/textos.css" rel="stylesheet"/>
-    
+    <script type="text/javascript" src="../../../config/validaciones.js"></script>
 	<head>
 
     <?php
@@ -55,20 +55,24 @@
                     <form id="formulario01" method="POST" action="../../controladores/usuario/modificar_Tel.php">
                     <input type="hidden" id="codigo" name="codigo" value="<?php echo $codigo ?>" />
                     
-                    
+
                     <label for="numero">Numero (*)</label>
-                    <input type="text" id="numero" name="numero" value="<?php echo $row["tel_numero"]; ?>" placeholder="Ingrese el número de numero ..."
-                    required/>
+                    <input type="text" id="numero" name="numero" value="<?php echo $row["tel_numero"]; ?>" placeholder="Ingrese el número de telefono ... " onkeyup="return validarNumeros(this) " required/>
                     <br>
                     
                     <label for="tipo">Tipo (*)</label>
-                    <input type="text" id="tipo" name="tipo" value="<?php echo $row["tel_tipo"]; ?>" placeholder="Ingrese sus dos tipo ..." required/>
+                      <select id="selectT" name="selectT" onsubmit="tipo()">
+                        <option value="<?php echo $row["tel_tipo"]; ?>" selected><?php echo $row["tel_tipo"]; ?></option>
+                        <option value="Celular">Celular</option>
+                        <option value="Convencional">Convencional</option>
+                    </select>
+                    <span id="mensajeTipo" class="error"></span>
                     <br>
-                    
+
                     <label for="operadora">Operadora (*)</label>
-                    <input type="text" id="operadora" name="operadora" value="<?php echo $row["tel_operadora"]; ?>" placeholder="Ingrese sus dos operadora ..." required/>
+                    <input type="text" id="operadora" name="operadora" value="<?php echo $row["tel_operadora"]; ?>" placeholder="Ingrese su operadora ..." required/>
                     <br>
-                    
+
                     <?php
                     }
                     } else { 

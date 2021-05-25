@@ -12,7 +12,7 @@
 
     <link href="../../../config/css/index.css"  rel="stylesheet"/>
     <link href="../../../config/css/textos.css" rel="stylesheet"/>
-    
+    <script type="text/javascript" src="../../../config/validaciones.js"></script>
 	<head>
       
     <?php
@@ -45,12 +45,14 @@
                     
                     <input type="hidden" id="codigo" name="codigo" value="<?php echo $codigo ?>" />
                     <label for="cedula">Contraseña Actual (*)</label>
-                    <input type="password" id="contrasena1" name="contrasena1" value="" requiredplaceholder="Ingrese su contraseña actual ..."/>
+                    <input type="password" id="contrasena1" name="contrasena1" value="" requiredplaceholder="Ingrese su contraseña actual ..." onkeyup="return validarPass(this)"/>
+                    <span id="mensajePass" class="error"></span>
                     <br>
                     <label for="cedula">Contraseña Nueva (*)</label>
-                    <input type="password" id="contrasena2" name="contrasena2" value="" requiredplaceholder="Ingrese su contraseña nueva ..."/>
+                    <input type="password" id="contrasena2" name="contrasena2" value="" requiredplaceholder="Ingrese su contraseña nueva ..." onkeyup="return validarPass(this)"/>
+                    <span id="mensajePass" class="error"></span>
                     <br>
-                    
+
                     <input id="boton_aceptar" type="submit" id="modificar" name="modificar" value="Modificar" />
                     <input id="boton_cancelar" type="reset" id="cancelar" name="cancelar" value="Cancelar" OnClick="location.href='../../vista/usuario/listar_usuarioA.php' " />
 

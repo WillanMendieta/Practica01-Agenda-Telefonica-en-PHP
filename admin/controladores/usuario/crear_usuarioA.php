@@ -26,7 +26,7 @@
  $correo = isset($_POST["correo"]) ? trim($_POST["correo"]): null;
  $contrasena = isset($_POST["contrasena"]) ? trim($_POST["contrasena"]) : null;
  $fechaNacimiento = isset($_POST["fechaNacimiento"]) ? trim($_POST["fechaNacimiento"]): null; 
- $rol = isset($_POST["rol"]) ? mb_strtoupper(trim($_POST["rol"]), 'UTF-8') : null;
+ $rol = $_POST["select"];
  $sql = "INSERT INTO usuarios VALUES (0, '$cedula', '$nombres', '$apellidos', '$direccion', 
  '$correo', MD5('$contrasena'), 'N', '$fechaNacimiento', null, null, '$rol')"; 
 

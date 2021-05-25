@@ -12,6 +12,7 @@
 
     <link href="../../../config/css/index.css"  rel="stylesheet"/>
     <link href="../../../config/css/textos.css" rel="stylesheet"/>
+    <script type="text/javascript" src="../../../config/validaciones.js"></script>
 
 <?php
  session_start();
@@ -55,16 +56,20 @@
                     <input type="hidden" id="codigo" name="codigo" value="<?php echo $codigo ?>" />
 
                     <label for="numero">Numero (*)</label>
-                    <input type="text" id="numero" name="numero" value="" placeholder="Ingrese el número de telefono ..."
-                    required/>
+                    <input type="text" id="numero" name="numero" value="" placeholder="Ingrese el número de telefono ... " onkeyup="return validarNumeros(this) " required/>
                     <br>
                     
                     <label for="tipo">Tipo (*)</label>
-                    <input type="text" id="tipo" name="tipo" value="" placeholder="Ingrese su tipo de telefono ..." required/>
+                      <select id="selectT" name="selectT" onsubmit="tipo()">
+                        <option value="1" selected>Seleccione un rol</option>
+                        <option value="Celular">Celular</option>
+                        <option value="Convencional">Convencional</option>
+                    </select>
+                    <span id="mensajeRol" class="error"></span>
                     <br>
-                    
+
                     <label for="operadora">Operadora (*)</label>
-                    <input type="text" id="operadora" name="operadora" value="" placeholder="Ingrese su  operadora ..." required/>
+                    <input type="text" id="operadora" name="operadora" value="" placeholder="Ingrese su operadora ..." required/>
                     <br>
                     
                     <input id="boton_aceptar" type="submit" id="crear" name="crear" value="Agregar Telefono" />

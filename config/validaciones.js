@@ -41,7 +41,7 @@ function validarCamposObligatorios(){
     }
     
     if(!bandera){
-        alert('Error: revisar los comentarios')
+        alert('Error: Complete todos los campos')
     }
 
     return bandera
@@ -91,7 +91,7 @@ function cedulaEcu(elemento){
         total = total % 10 ? 10 - total % 10 : 0;
 
         if (cad.charAt(longitud-1) == total) {
-        document.getElementById("mensajeCedula").innerHTML = '';
+        document.getElementById("mensajeCedula").innerHTML = 'Cedula Correcta';
         return true;//
         }else{
         document.getElementById("mensajeCedula").innerHTML = ("Cedula Inválida");
@@ -235,6 +235,17 @@ function rol(){
     indice = document.getElementById("select").selectedIndex;
     if( indice == null || indice == 1 ) {
         document.getElementById('mensajeRol').innerHTML = ("Seleccione un rol");
+        return false;
+    }else{
+        return true;
+    }
+    
+}
+
+function tipo(){
+    indice = document.getElementById("selectT").selectedIndex;
+    if( indice == null || indice == 1 ) {
+        document.getElementById('mensajeTipo').innerHTML = ("Seleccione un tipo de telefono");
         return false;
     }else{
         return true;

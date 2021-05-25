@@ -12,6 +12,7 @@
 
     <link href="../../../config/css/index.css"  rel="stylesheet"/>
     <link href="../../../config/css/textos.css" rel="stylesheet"/>
+    <script type="text/javascript" src="../../../config/validaciones.js"></script>
 
 	<head>
 
@@ -43,19 +44,21 @@
             <section>
             
                 <article id="BloqueDeBajoMenu">
-                    <form id="formulario01" method="POST" action="../../controladores/usuario/crear_usuarioA.php">
+                    <form id="formulario01" method="POST" action="../../controladores/usuario/crear_usuarioA.php" onkeyup="return validarCamposObligatorios(this)">
 
                     <label for="cedula">Cedula (*)</label>
-                    <input type="text" id="cedula" name="cedula" value="" placeholder="Ingrese el número de cedula ..."
-                    required/>
+                    <input type="text" id="cedula" name="cedula" value="" placeholder="Ingrese el número de cedula ..." onkeyup="return validarNumeros(this)"required/>
+                    <span id="mensajeCedula" class="error"></span>
                     <br>
                     
                     <label for="nombres">Nombres (*)</label>
-                    <input type="text" id="nombres" name="nombres" value="" placeholder="Ingrese sus dos nombres ..." required/>
+                    <input type="text" id="nombres" name="nombres" value="" placeholder="Ingrese sus dos nombres ..." onkeyup="return validarLetras(this) "required/>
+                    <span id="mensajeNombres" class="error"></span>
                     <br>
                     
                     <label for="apellidos">Apelidos (*)</label>
-                    <input type="text" id="apellidos" name="apellidos" value="" placeholder="Ingrese sus dos apellidos ..." required/>
+                    <input type="text" id="apellidos" name="apellidos" value="" placeholder="Ingrese sus dos apellidos ..." onkeyup="return validarLetras(this) "required/>
+                    <span id="mensajeApellidos" class="error"></span>
                     <br>
 
                     <label for="direccion">Dirección (*)</label>
@@ -63,30 +66,41 @@
                     <br>
 
                     <label for="correo">Correo electrónico (*)</label>
-                    <input type="email" id="correo" name="correo" value="" placeholder="Ingrese su correo electrónico ..." required/>
+                    <input type="email" id="correo" name="correo" value="" placeholder="Ingrese su correo electrónico ..."  onkeyup="return validarCorreo(this)" required/>
+                    <span id="mensajeCorreo" class="error"></span>
                     <br>
                     
                     <label for="correo">Contraseña (*)</label>
-                    <input type="password" id="contrasena" name="contrasena" value="" placeholder="Ingrese su contraseña ..." required/>
+                    <input type="password" id="contrasena" name="contrasena" value="" placeholder="Ingrese su contraseña ..." onkeyup="return validarPass(this)" required/>
+                    <span id="mensajePass" class="error"></span>
                     <br>
                     
                     <label for="fecha">Fecha Nacimiento (*)</label>
                     <input type="date" id="fechaNacimiento" name="fechaNacimiento" value="" placeholder="Ingrese su fecha de nacimiento ..." required/>
                     <br>
                     
-                    <label for="rol">Rol de usuario (*)</label>
-                    <input type="text" id="rol" name="rol" value="" placeholder="Ingrese el rol del usuario ..."required/>
+                    <label for="rol">Rol de usuario(*)</label>
+                    <select id="select" name="select" onsubmit="rol()">
+                        <option value="1" selected>Seleccione un rol</option>
+                        <option value="A">Admin</option>
+                        <option value="U">Usuario</option>
+                    </select>
+                    <span id="mensajeRol" class="error"></span>
                     <br>
 
                     <label for="numero">Numero (*)</label>
-                    <input type="text" id="numero" name="numero" value="" placeholder="Ingrese el número de telefono ..."
-                    required/>
+                    <input type="text" id="numero" name="numero" value="" placeholder="Ingrese el número de telefono ... " onkeyup="return validarNumeros(this) " required/>
                     <br>
                     
                     <label for="tipo">Tipo (*)</label>
-                    <input type="text" id="tipo" name="tipo" value="" placeholder="Ingrese su tipo de telefono ..." required/>
+                      <select id="selectT" name="selectT" onsubmit="tipo()">
+                        <option value="1" selected>Seleccione un rol</option>
+                        <option value="Celular">Celular</option>
+                        <option value="Convencional">Convencional</option>
+                    </select>
+                    <span id="mensajeRol" class="error"></span>
                     <br>
-                    
+
                     <label for="operadora">Operadora (*)</label>
                     <input type="text" id="operadora" name="operadora" value="" placeholder="Ingrese su operadora ..." required/>
                     <br>

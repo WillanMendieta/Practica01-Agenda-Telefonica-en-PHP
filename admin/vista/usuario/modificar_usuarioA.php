@@ -12,7 +12,7 @@
 
     <link href="../../../config/css/index.css"  rel="stylesheet"/>
     <link href="../../../config/css/textos.css" rel="stylesheet"/>
-    
+    <script type="text/javascript" src="../../../config/validaciones.js"></script>
 	<head>
 
     <?php
@@ -56,16 +56,18 @@
                     <input type="hidden" id="codigo" name="codigo" value="<?php echo $codigo ?>" />
                     
                     <label for="cedula">Cedula (*)</label>
-                    <input type="text" id="cedula" name="cedula" value="<?php echo $row["usu_cedula"]; ?>" placeholder="Ingrese el número de cedula ..."
-                    required/>
+                    <input type="text" id="cedula" name="cedula" value="<?php echo $row["usu_cedula"]; ?>" placeholder="Ingrese el número de cedula ..." onkeyup="return validarNumeros(this)"required/>
+                    <span id="mensajeCedula" class="error"></span>
                     <br>
                     
                     <label for="nombres">Nombres (*)</label>
-                    <input type="text" id="nombres" name="nombres" value="<?php echo $row["usu_nombres"]; ?>" placeholder="Ingrese sus dos nombres ..." required/>
+                    <input type="text" id="nombres" name="nombres" value="<?php echo $row["usu_nombres"]; ?>" placeholder="Ingrese sus dos nombres ..." onkeyup="return validarLetras(this) "required/>
+                    <span id="mensajeNombres" class="error"></span>
                     <br>
                     
                     <label for="apellidos">Apelidos (*)</label>
-                    <input type="text" id="apellidos" name="apellidos" value="<?php echo $row["usu_apellidos"]; ?>" placeholder="Ingrese sus dos apellidos ..." required/>
+                    <input type="text" id="apellidos" name="apellidos" value="<?php echo $row["usu_apellidos"]; ?>" placeholder="Ingrese sus dos apellidos ..." onkeyup="return validarLetras(this) "required/>
+                    <span id="mensajeApellidos" class="error"></span>
                     <br>
 
                     <label for="direccion">Dirección (*)</label>
@@ -73,16 +75,24 @@
                     <br>
 
                     <label for="correo">Correo electrónico (*)</label>
-                    <input type="email" id="correo" name="correo" value="<?php echo $row["usu_correo"]; ?>" placeholder="Ingrese su correo electrónico ..." required/>
+                    <input type="email" id="correo" name="correo" value="<?php echo $row["usu_correo"]; ?>" placeholder="Ingrese su correo electrónico ..."  onkeyup="return validarCorreo(this)" required/>
+                    <span id="mensajeCorreo" class="error"></span>
                     <br>
 
                     <label for="fecha">Fecha Nacimiento (*)</label>
-                    <input type="date" id="fechaNacimiento" name="fechaNacimiento" value="<?php echo$row["usu_fecha_nacimiento"]; ?>" required placeholder="Ingrese la fecha de nacimiento ..."/>
+                    <input type="date" id="fechaNacimiento" name="fechaNacimiento" value="<?php echo$row["usu_fecha_nacimiento"]; ?>" placeholder="Ingrese su fecha de nacimiento ..." required/>
                     <br>
+                    
 
-                    <label for="rol">Rol de usuario (*)</label>
-                    <input type="text" id="rol" name="rol" value="<?php echo $row["usu_rol"]; ?>" placeholder="Ingrese el rol del usuario ..."required/>
+                    <label for="rol">Rol de usuario(*)</label>
+                    <select id="select" name="select" onsubmit="rol()">
+                        <option value="<?php echo $row["usu_rol"]; ?>" selected><?php echo $row["usu_rol"]; ?></option>
+                        <option value="A">Admin</option>
+                        <option value="U">Usuario</option>
+                    </select>
+                    <span id="mensajeRol" class="error"></span>
                     <br>
+                    
                     <?php
                     }
                     } else { 

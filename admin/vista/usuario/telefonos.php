@@ -47,15 +47,15 @@
                         <th>Numero</th>
                         <th>Tipo</th>
                         <th>Operadora</th>
-                        <th>Eliminado</th>
+                        
                         </tr>
 
                         <?php
                         include '../../../config/conexionBD.php'; 
                         $codigo = $_GET["codigo"];
                         #aparezca todo 
-                        $sql = "SELECT * FROM telefonos where tel_usuario=$codigo";
-                   #     $sql = "SELECT * FROM telefonos where tel_usuario=$codigo and tel_eliminado = 'NO'";
+                    #    $sql = "SELECT * FROM telefonos where tel_usuario=$codigo";
+                        $sql = "SELECT * FROM telefonos where tel_usuario=$codigo and tel_eliminado = 'NO'";
                         $result = $conn->query($sql);
                         
                         if ($result->num_rows > 0) {
@@ -66,7 +66,7 @@
                                 echo " <td> <a href=tel:".$row["tel_numero"].">".$row["tel_numero"]."</a> </td>";
                                 echo " <td>" . $row['tel_tipo'] ."</td>";
                                 echo " <td>" . $row['tel_operadora'] . "</td>";
-                                echo " <td>" . $row['tel_eliminado'] . "</td>";
+                                
                                 echo " <td> <a href='eliminar_Tel.php?codigo=" . $row['tel_id'] . "'>Eliminar</a> </td>";
                                 echo " <td> <a href='modificar_Tel.php?codigo=" . $row['tel_id'] . "'>Modificar</a> </td>";
                                 echo " <td> <a href='agregarTel.php?codigoT=" . $row['tel_usuario'] . "'>Agregar Telefonos </a> </td>";
