@@ -10,6 +10,8 @@ c. Sentencias SQL de la estructura de la base de datos.<br/>
  ![img3](/imagen/i3.jpg)<br/>
 Se creo las tablas en base al diagrama antes mencionado.<br/>
 d. El desarrollo de cada uno de los requerimientos antes descritos.<br/>
+•	Los usuarios “anónimos” pueden registrarse en la aplicación a través de un formulario de creación de cuentas.<br/>
+ ![img20](/imagen/i20.jpg)<br/>
 •	Los usuarios con rol de “admin” pueden: agregar, modificar, eliminar, buscar, listar y cambiar la contraseña de cualquier usuario de la base de datos.<br/>
  ![img4](/imagen/i4.jpg)<br/>
 Como se puede apreciar en la imagen, dentro de la sesión de un administrador, tenemos la opción de crear usuario, pero con el detalle de elegir que rol tendrá el usuario.<br/>
