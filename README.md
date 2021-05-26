@@ -47,18 +47,17 @@ Con el código que se aprecia en la captura verificamos que la contraseña ya qu
  ![img18](/imagen/i18.jpg)<br/>
 
 Con el código que se aprecia en la captura verificamos que realmente se escoja una opción en el rol de usuario, como también en el tipo de teléfono (celular, convencional).<br/>
-f. La evidencia del correcto funcionamiento de cada uno de los puntos requeridos.<br/>
 
-g.  Realizar un commit y push por cada requerimiento de los puntos antes descritos.<br/>
+f.  Realizar un commit y push por cada requerimiento de los puntos antes descritos.<br/>
   ![img19](/imagen/i19.jpg)<br/>
-h. En el informe se debe incluir la información de GitHub (usuario y URL del repositorio de la práctica<br/>
+g. En el informe se debe incluir la información de GitHub (usuario y URL del repositorio de la práctica<br/>
 Usuario: WillanMendieta<br/>
 Url: https://github.com/WillanMendieta/Practica01-Agenda-Telefonica-en-PHP.git<br/>
 
 
 
 CONCLUSIONES:<br/>
-En esta practica se aprendió a utilizar de mejor manera la conectividad de la página web con la base de datos, la cual nos va a ayudar a tener un mejor manejo de herramientas en nuestra vida ya como profesionales.<br/>
+En esta practica se aprendió a utilizar de mejor manera la conectividad de la página web con la base de datos mediante php, la cual nos va a ayudar a tener un mejor manejo de herramientas en nuestra vida ya como profesionales.<br/>
 
 Nombre de estudiante: Willan Steven Mendieta Molina<br/>
 
