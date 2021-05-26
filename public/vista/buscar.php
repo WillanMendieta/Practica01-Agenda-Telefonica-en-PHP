@@ -1,7 +1,7 @@
 
 <?php
  //incluir conexión a la base de datos
- include '../../../../config/conexionBD.php';
+ include '../../config/conexionBD.php';
  $cedula = $_GET['cedula']; 
 
  $sql = "SELECT * FROM usuarios WHERE usu_eliminado = 'N' and usu_cedula='$cedula'"; 
@@ -25,10 +25,7 @@
         echo " <td>" . $row['usu_direccion'] . "</td>";
         echo " <td> <a href=mailto:".$row['usu_correo'].">".$row['usu_correo']."</a> </td>";
         echo " <td>" . $row['usu_fecha_nacimiento'] . "</td>"; 
-        echo " <td> <a href='../telefonos.php?codigo=" . $row['usu_id'] . "'>Telefonos</a> </td>";
-        echo " <td> <a href='../eliminar_usuarioA.php?codigo=" . $row['usu_id'] . "'>Eliminar</a> </td>";
-        echo " <td> <a href='../modificar_usuarioA.php?codigo=" . $row['usu_id'] . "'>Modificar</a> </td>";
-        echo " <td> <a href='../cambiar_contra_usuarioA.php?codigo=" . $row['usu_id'] . "'>Cambiar contraseña</a> </td>";
+        echo " <td> <a href='../../admin/vista/usuario/telefonos.php?codigo=" . $row['usu_id'] . "'>Telefonos</a> </td>";
         echo "</tr>";
     }
  } else { 

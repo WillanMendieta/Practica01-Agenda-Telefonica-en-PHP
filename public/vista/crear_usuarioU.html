@@ -11,14 +11,7 @@
   
   <h1>CREAR USUARIO</h1>
   
-  <nav> 
-      <ul id="navUsuariosAdmi"> 
-      <li><a href="crear_usuarioU.php">Agregar Usuario</a></li> 
-      <li><a href="../usuario/buscarCedula/buscar.html">Buscar Usuario</a></li> 
-      <li><a href="listar_usuarioA.php">Listar Usuarios</a></li>  
-      <li><a href="../../../config/cerrar.sesion.php">Cerrar Sesion</a></li> 
-      </ul> 
-  </nav>
+
 
   <link href="../../config/css/index.css"  rel="stylesheet"/>
   <link href="../../config/css/textos.css" rel="stylesheet"/>
@@ -78,9 +71,28 @@
     <input type="date" id="fechaNacimiento" name="fechaNacimiento" value="" placeholder="Ingrese su fecha de nacimiento"
     required />
     <br>
+
+    <label for="numero">Numero (*)</label>
+    <input type="text" id="numero" name="numero" value="" placeholder="Ingrese el número de telefono ... " onkeyup="return validarNumeros(this) " required/>
+    <br>
+    
+    <label for="tipo">Tipo (*)</label>
+      <select id="selectT" name="selectT" onsubmit="tipo()">
+        <option value="1" selected>Seleccione un rol</option>
+        <option value="Celular">Celular</option>
+        <option value="Convencional">Convencional</option>
+    </select>
+    <span id="mensajeRol" class="error"></span>
+    <br>
+
+    <label for="operadora">Operadora (*)</label>
+    <input type="text" id="operadora" name="operadora" value="" placeholder="Ingrese su operadora ..." required/>
+    <br>
+
+
     <br>
     <input type="submit" id="crear" name="crear" value="Crear Usuario" />
-    <input type="reset" id="cancelar" name="cancelar" value="Cancelar" />
+    <input  type="reset" id="cancelar" name="cancelar" value="Cancelar" OnClick="location.href='login.html' ">
   </form> 
 
 </article>

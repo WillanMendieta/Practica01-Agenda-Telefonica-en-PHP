@@ -1,50 +1,41 @@
 <?php
  //incluir conexión a la base de datos
- include "../../config/conexionBD.php";
- 
+ include '../../../../config/conexionBD.php';
  $cedula = $_GET['cedula']; 
- $sqlPer = "SELECT usu_cedula,usu_nombres,usu_apellidos,usu_correo FROM usuarios WHERE usu_cedula='$cedula'";
- $resultPe = $conn->query($sqlPer);
- 
- if ($resultPe->num_rows > 0) {
-        $rowP = $resultPe->fetch_assoc();              
-         echo "<center><h3>USUARIO </h3></center>";
-         echo "<p><b>CEDULA : </b>" . $rowP["usu_cedula"] . "</br></p>" ;
-         echo "<p><b>NOMBRES: </b>" . $rowP['usu_nombres'] . "</br></p>" ;
-         echo "<p><b>APELLIDOS: </b>" . $rowP['usu_apellidos'] . "</br></p>" ;
-         echo "<p><b>CORREO: </b>" . $rowP['usu_correo'] . "</br></p>" ;
 
+ $sql = "SELECT * FROM usuarios WHERE usu_eliminado = 'N' and usu_cedula='$cedula'"; 
 
- } else {
-     echo " No existe persona";
- }
- $sql = "SELECT tel_numero,tel_tipo,tel_operadora FROM usuarios a , telefonos b WHERE a.usu_eliminado = 'N' and a.usu_cedula='$cedula' AND a.usu_id=b.tel_usuario"; 
-//cambiar la consulta para puede buscar por ocurrencias de letras
  $result = $conn->query($sql);
- echo " <table style='width:100%'>
+ echo " <table ;>
  <tr>
- 
- <th>Telefono</th>
- <th>Tipo</th>
- <th>Operadora</th>
- <th></th>
- <th></th>
- <th></th> 
- </tr>";
+                        <th>Cedula</th>
+                        <th>Nombres</th>
+                        <th>Apellidos</th>
+                        <th>Dirección</th>
+                        <th>Correo</th>
+                        <th>Fecha Nacimiento</th> 
+                        </tr>";
  if ($result->num_rows > 0) { 
- while($row = $result->fetch_assoc()) {
- 
- echo "<tr>";
- echo " <td>" . $row['tel_numero'] . "</td>";
- echo " <td>" . $row['tel_tipo'] . "</td>";
- echo " <td>" . $row['tel_operadora'] . "</td>";
- 
- echo "</tr>"; 
- } 
+    while($row = $result->fetch_assoc()) {
+        echo "<tr>";
+        echo " <td>" . $row["usu_cedula"] . "</td>";
+        echo " <td>" . $row['usu_nombres'] ."</td>";
+        echo " <td>" . $row['usu_apellidos'] . "</td>";
+        echo " <td>" . $row['usu_direccion'] . "</td>";
+        echo " <td> <a href=mailto:".$row['usu_correo'].">".$row['usu_correo']."</a> </td>";
+        echo " <td>" . $row['usu_fecha_nacimiento'] . "</td>"; 
+        echo " <td> <a href='../telefonos.php?codigo=" . $row['usu_id'] . "'>Telefonos</a> </td>";
+        echo " <td> <a href='../eliminar_usuarioA.php?codigo=" . $row['usu_id'] . "'>Eliminar</a> </td>";
+        echo " <td> <a href='../modificar_usuarioA.php?codigo=" . $row['usu_id'] . "'>Modificar</a> </td>";
+        echo " <td> <a href='../cambiar_contra_usuarioA.php?codigo=" . $row['usu_id'] . "'>Cambiar contraseña</a> </td>";
+        echo "</tr>";
+    }
  } else { 
  echo "<tr>";
  echo " <td colspan='7'> No existen usuarios registradas en el sistema </td>";
  echo "</tr>"; 
  }
  echo "</table>";
- $conn->close();
+ $conn->close(); 
+ 
+?>

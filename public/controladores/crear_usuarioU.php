@@ -30,6 +30,25 @@
     
     if ($conn->query($sql) === TRUE) { 
         echo "<p>Se ha creado los datos personales correctamemte!!!</p>"; 
+
+
+        
+        $idTel= "SELECT MAX(usu_id) AS usu_id FROM usuarios";
+        $resultId = $conn->query($idTel);
+        while($row=$resultId->fetch_assoc()){
+            $id=$row['usu_id'];
+        }
+
+        $numero = isset($_POST["numero"]) ? trim($_POST["numero"]) : null;
+        $tipo = isset($_POST["tipo"]) ? mb_strtoupper(trim($_POST["tipo"]), 'UTF-8') : null;
+        $operadora = isset($_POST["operadora"]) ? mb_strtoupper(trim($_POST["operadora"]), 'UTF-8') : null;
+        $sql2 = "INSERT INTO telefonos VALUES (0, '$numero', '$tipo', '$operadora', 'NO', null, null, $id)"; 
+        
+                        if ($conn->query($sql2) === TRUE) {
+                            echo "<p>Se ha creado el telefono correctamemte!!!</p>"; 
+                        }else {
+                            echo "<p aun no registra</p>"; 
+                            }
     } else { 
         if($conn->errno == 1062){ 
             echo "<p class='error'>La persona con la cedula $cedula ya esta registrada en el sistema </p>"; 
