@@ -5,7 +5,13 @@
  <title>Cambiar Contraseña</title>
 </head>
 <body>
+<?php
+ session_start();
+ if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE){ 
+ header("Location: ../../../public/vista/login.html"); 
+ }
 
+?>
 <?php 
  //incluir conexión a la base de datos
  include '../../../config/conexionBD.php'; 

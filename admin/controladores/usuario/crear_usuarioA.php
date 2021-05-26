@@ -15,6 +15,13 @@
  }
  </style>
 </head>
+<?php
+ session_start();
+ if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE){ 
+ header("Location: ../../../public/vista/login.html"); 
+ }
+
+?>
 <body>
  <?php 
  //incluir conexión a la base de datos
