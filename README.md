@@ -43,10 +43,10 @@ Con el código que se aprecia en la captura verificamos que los campos como nomb
 Con el código que se aprecia en la captura verificamos que el campo correo solo permita dos tipos de dominios: est.ups.edu.ec, ups.edu.ec.<br/>
  ![img17](/imagen/i17.jpg)<br/>
 
-Con el código que se aprecia en la captura verificamos que realmente se escoja una opción en el rol de usuario, como también en el tipo de teléfono (celular, convencional).<br/>
- ![img18](/imagen/i18.jpg)<br/>
 Con el código que se aprecia en la captura verificamos que la contraseña ya que se tiene que poner con signos como: mayúsculas, minúsculas, @r_h$.<br/>
+ ![img18](/imagen/i18.jpg)<br/>
 
+Con el código que se aprecia en la captura verificamos que realmente se escoja una opción en el rol de usuario, como también en el tipo de teléfono (celular, convencional).<br/>
 f. La evidencia del correcto funcionamiento de cada uno de los puntos requeridos.<br/>
 
 g.  Realizar un commit y push por cada requerimiento de los puntos antes descritos.<br/>
