@@ -12,6 +12,11 @@ Se creo las tablas en base al diagrama antes mencionado.<br/>
 d. El desarrollo de cada uno de los requerimientos antes descritos.<br/>
 •	Los usuarios “anónimos” pueden registrarse en la aplicación a través de un formulario de creación de cuentas.<br/>
  ![img20](/imagen/i20.jpg)<br/>
+ •	Los usuarios “anónimos” pueden listar los números de teléfono de un usuario usando su número de cédula o correo electrónico.
+ ![img21](/imagen/i21.jpg)<br/>
+  ![img22](/imagen/i22.jpg)<br/>
+   ![img23](/imagen/i23.jpg)<br/>
+   
 •	Los usuarios con rol de “admin” pueden: agregar, modificar, eliminar, buscar, listar y cambiar la contraseña de cualquier usuario de la base de datos.<br/>
  ![img4](/imagen/i4.jpg)<br/>
 Como se puede apreciar en la imagen, dentro de la sesión de un administrador, tenemos la opción de crear usuario, pero con el detalle de elegir que rol tendrá el usuario.<br/>
@@ -66,3 +71,9 @@ Nombre de estudiante: Willan Steven Mendieta Molina<br/>
 
 Firma de estudiante:  <br/>
   ![img43](/imagen/i43.jpg)
+  
+  Darwin Fernando León Tenesaca<br/>
+  
+  Firma de estudiante: <br/>
+   ![img24](/imagen/i24.jpg)
+  
