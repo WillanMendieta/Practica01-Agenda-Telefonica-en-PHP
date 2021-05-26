@@ -1,5 +1,5 @@
 <!-- 
-  autor: Willian Mendieta y Darwin león
+  autor: Willian Mendieta y Darwin León
   fecha: 25/05/2021
 -->
 <!DOCTYPE html> 
@@ -24,10 +24,9 @@
     $correo = isset($_POST["correo"]) ? trim($_POST["correo"]): null; 
     $contrasena = isset($_POST["contrasena"]) ? trim($_POST["contrasena"]) : null;
     $fechaNacimiento = isset($_POST["fechaNacimiento"]) ? trim($_POST["fechaNacimiento"]): null; 
-    $rol = $_POST["select"];
 
     $sql = "INSERT INTO usuarios VALUES (0, '$cedula', '$nombres', '$apellidos', '$direccion', '$correo', 
-    MD5('$contrasena'), 'N','$fechaNacimiento', null, null, '$rol' )"; 
+    MD5('$contrasena'), 'N','$fechaNacimiento', null, null, 'U' )"; 
     
     if ($conn->query($sql) === TRUE) { 
         echo "<p>Se ha creado los datos personales correctamemte!!!</p>"; 
@@ -40,7 +39,6 @@
     } 
     
     //cerrar la base de datos
-
     $conn->close(); 
     echo "<a href='../vista/crear_usuarioU.html'>Regresar</a>"; 
     ?> 

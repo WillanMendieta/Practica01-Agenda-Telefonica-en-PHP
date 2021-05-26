@@ -1,5 +1,5 @@
 /*
-autor: Willian Mendieta y Darwin león
+autor: Willian Mendieta y Darwin León
 fecha: 25/05/2021
 */
 
@@ -91,7 +91,7 @@ function cedulaEcu(elemento){
         total = total % 10 ? 10 - total % 10 : 0;
 
         if (cad.charAt(longitud-1) == total) {
-        document.getElementById("mensajeCedula").innerHTML = 'Cedula Correcta';
+        document.getElementById("mensajeCedula").innerHTML = "";
         return true;//
         }else{
         document.getElementById("mensajeCedula").innerHTML = ("Cedula Inválida");
