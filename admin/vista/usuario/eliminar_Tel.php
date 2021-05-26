@@ -24,7 +24,7 @@
 ?>
       
         <header>
-            <img id="logo" src="../../../config/imagenes/telefono.png" alt="../index.html" />
+        <a href= "crear_usuarioA.php"> <img id="logo" src="../../../config/imagenes/telefono.png"/></a>
             <h1>Agenda Telefonica</h1>
             <nav> 
                 <ul id="navUsuariosAdmi"> 

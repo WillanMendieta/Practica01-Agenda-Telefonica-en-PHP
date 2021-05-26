@@ -15,7 +15,8 @@
     <script type="text/javascript" src="buscar.js"></script>
 	<head>
         <header>
-            <img id="logo" src="../../../../config/imagenes/telefono.png" alt="../index.html" />
+            <a href= "../crear_usuarioA.php"> <img id="logo" src="../../../../config/imagenes/telefono.png"/></a>
+           
             <h1>Agenda Telefonica</h1>
 
             <nav> 
@@ -32,8 +33,8 @@
             <section>
             
                 <article id="BloqueDeBajoMenuC">
-                    <div id="informacion"><b>Datos de la persona</b></div>
-                    <form onsubmit="return buscarPorCedula()">
+                    <div id="informacion"><b>Ingrese cedula</b></div>
+                        <form id= "busquedaCE"onsubmit="return buscarPorCedula()">
 
                         <input type="text" id="cedula" name="cedula" value="">
                         <input type="button" id="buscar" name="buscar" value="Buscar" onclick="buscarPorCedula()">

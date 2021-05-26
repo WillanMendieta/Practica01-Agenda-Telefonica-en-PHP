@@ -53,7 +53,7 @@ h1{
     margin-right: 0%;
     margin-bottom: 0%;
     width: 60%;
-    background-color: rgb(21, 124, 168,0.6);
+    background-color: rgba(62, 143, 190, 0.767);
 }
 
 #BloqueDeBajoMenu{
@@ -64,12 +64,32 @@ h1{
     margin-left: 20%;
 }
 
+#BloqueDeBajoMenuL{
+    float: left;
+    margin-top: 3%;
+    margin-left: 55%;
+    margin-right: 0%;
+    margin-bottom: 0%;
+    width: 60%;
+
+}
+
+#BloqueDeBajoMenuL{
+    float: left;
+    height: max-content;
+    margin: 0%;
+    padding: 0%;
+    margin-left: 20%;
+}
+
 #BloqueDeBajoMenuC{
     float: left;
     margin-left: 25%;
-    background-color: rgb(21, 124, 168,0.6);
-    width: 52%;
+    background-color: rgba(62, 143, 190, 0.767);
+    width: 50%;
+    font-size: 200%;
 }
+
 #formulario01{
     float: left;
     width: 100%;
@@ -105,7 +125,7 @@ input{
     font-size:100%;
 }
 #boton_cancelar{
-    margin-top: -3.4%;
+    margin-top: -3.2%;
     float: left;
     margin-left: 50%;
     font-size:100%;

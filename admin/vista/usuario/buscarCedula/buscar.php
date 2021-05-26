@@ -3,12 +3,11 @@
  //incluir conexión a la base de datos
  include '../../../../config/conexionBD.php';
  $cedula = $_GET['cedula']; 
- //echo "Hola " . $cedula; 
- 
+
  $sql = "SELECT * FROM usuarios WHERE usu_eliminado = 'N' and usu_cedula='$cedula'"; 
-//cambiar la consulta para puede buscar por ocurrencias de letras
+
  $result = $conn->query($sql);
- echo " <table >
+ echo " <table ;>
  <tr>
                         <th>Cedula</th>
                         <th>Nombres</th>

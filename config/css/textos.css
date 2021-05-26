@@ -1,6 +1,6 @@
 @font-face {
     font-family: "OLF";
-    src: url("../Estilo_Tex/Original_Surfer/OriginalSurfer-Regular.ttf");
+    src: url("../../Estilo_Tex/Original_Surfer/OriginalSurfer-Regular.ttf");
 
 }
 
@@ -38,9 +38,22 @@ h1 {color: whitesmoke;
     font-size:180%;
 }
 
+#BloqueDeBajoMenuL{
+    color: whitesmoke; 
+    font-family: 'OLF'; 
+    font-weight: bolder;
+    text-decoration: underline;
+    font-size:180%;
+}
 
-
+#BloqueDeBajoMenuC{
+    color: whitesmoke; 
+    font-size:100%;
+}
     
+#busquedaCE{
+    font-size:150%;
+}
 
 #Pie{
     color: whitesmoke; 
