@@ -12,6 +12,7 @@
 
     <link href="../../config/css/index.css"  rel="stylesheet"/>
     <link href="../../config/css/textos.css" rel="stylesheet"/>
+    <script type="text/javascript" src="../../config/validaciones.js"></script>
     <script type="text/javascript" src="buscarCedula/buscar.js"></script>
 	<head>
         <header>
@@ -28,7 +29,7 @@
                     <div id="informacion"><b>Ingrese correo</b></div>
                         <form id= "busquedaCO"onsubmit="return buscarPorCorreo()">
 
-                        <input type="text" id="correo" name="correo" value="">
+                        <input type="text" id="correo" name="correo" value="" onkeyup="return validarCorreo(this)">
                         <input type="button" id="buscar" name="buscar" value="Buscar" onclick="buscarPorCorreo()">
                        </form>
                        
