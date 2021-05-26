@@ -7,7 +7,7 @@
 <html>
 <head>
  <meta charset="UTF-8">
- <title>Crear Nuevo Usuario</title>
+ <title>Login</title>
  <style type="text/css" rel="stylesheet">
  .error{
  color: red;
