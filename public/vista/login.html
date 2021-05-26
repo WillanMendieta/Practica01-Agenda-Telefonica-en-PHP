@@ -13,7 +13,7 @@
     <link href="../../config/css/index.css"  rel="stylesheet"/>
     <link href="../../config/css/textos.css" rel="stylesheet"/>
 
-	<head>
+    </head>
       
         <header>
             <img id="logo" src="../../config/imagenes/telefono.png" alt="../index.html" />
@@ -31,7 +31,8 @@
                         <input type="password" id="contrasena" name="contrasena" value="" placeholder="Ingrese su contraseña ..."/>
                         <br>
                         <input type="submit" id="login" name="login" value="Iniciar Sesión" />
-                        <input id="crearUsuarioA" type="reset" id="crearUsuarioA" name="crearUsuarioA" value="Crear Usuario" OnClick="location.href='crear_usuarioU.html' " />
+                        <input id="crearUsuarioA" type="reset" id="crearUsuarioA" name="crearUsuarioA" value="Crear Usuario"
+                         OnClick="location.href='crear_usuarioU.html' " />
                     
                         
                         </form> 
@@ -39,51 +40,15 @@
 
             </section>
 
-            <h1>LISTAR TELEFONOS</h1> <br>
+            <h1>Listar Teléfonos</h1> <br>
             <article id="BloqueDeBajoMenu">
                 <form id="formulario01" method="POST" action="../controladores/listar_telefonoU.php" >
                   
-                  <label for="cedula">Cedula / correo (*)</label>
-                  <input type="text" id="cedulaU" name="cedulaU" value="" placeholder="Ingrese un número de cedula o correo"
-                  required onkeyup="return validar" />
-                  <span id="mensajeCedula" class="error"></span>
-                  <br>
-                  <input type="submit" id="listar" name="listar" value="Listar" />
-                  <input type="reset" id="cancelar" name="cancelar" value="Cancelar" />
-                  <br>
-                  
-                  <table border="10px">
-                    <tr>
-                    <th>N° Telefono </th>
-                    <th> Tipo </th>
-                    <th> Operadora </th>
-                    <th> Fecha Creacion </th>
-                    </tr>
-                    
-                    <tr>
-                    <td>  </td>
-                    <td>  </td>
-                    <td>  </td>
-                    <td>  </td>
-                    </tr>
-                    
-                    <tr>
-                    <td>  </td>
-                    <td>  </td>
-                    <td>  </td>
-                    <td>  </td>
-                    </tr>
-                    
-                    <tr>
-                    <td>  </td>
-                    <td>  </td>
-                    <td>  </td>
-                    <td>  </td>
-                    </tr>
-                    
-                    </table>
+                  <input type="button" class="cedula" value="Cédula" onclick="location.href='buscarCedula.html' "  />
+                  <input type="button" class="cancelar"  value="Correo" onclick="location.href='buscarCorreo.html' " />
             </article>
 
+        <br><br><br>
         <footer id="Pie">
             Integrantes:Willan Mendieta  Correo:<a href="mailto: wmendietam@est.ups.edu.ec">wmendietam@est.ups.edu.ec</a> tel: <a href="tel: 0980158835 "> 0998113193 </a></p>
             Darwin Leon Correo: <a href="mailto: dleont@est.ups.edu.ec">dleont@est.ups.edu.ec</a> tel: <a href="tel: 0998113193"> 0998113193 </a></p>
